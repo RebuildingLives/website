@@ -5,7 +5,7 @@ const OurTeam = () => {
   return (
     <>
       <div className="mt-12 text-center">
-        <h1 className="text-heading font-bold leading-none tracking-tight sm:text-4xl">Our Team</h1>
+        <h1 className="text-heading font-bold leading-none tracking-tight sm:text-4xl">Meet the Team</h1>
       </div>
       <PeopleSection />;
     </>

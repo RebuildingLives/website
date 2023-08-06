@@ -15,7 +15,7 @@ export default function Hero() {
   const [showDonationBox, setShowDonationBox] = useState(false);
 
   return (
-    <section className="relative h-[calc(100vh-63px)] lg:h-[calc(100vh-80px)]">
+    <section className="relative h-[calc(100vh-80px)] lg:h-[calc(100vh-120px)]">
       {!showDonationBox && (
         <div className="lg:hidden absolute z-30 w-full h-12 bg-transparent p-2 flex gap-2">
           <button
@@ -64,7 +64,7 @@ export default function Hero() {
       <div className="relative h-full z-20 mx-auto max-w-screen-xl px-4 py-32 sm:px-6 flex items-center justify-between xl:px-8">
         <div className="max-w-xl">
           <h1 className="text-heading font-extrabold text-primary-clr">Rebuilding Lives UK</h1>
-          <p className="mt-4 max-w-lg sm:text-xl/relaxed text-white">
+          <p className="max-w-lg sm:text-xl/relaxed text-white">
             Rebuilding Lives UK empowers survivors of domestic abuse on the road to recovery by
             providing practical support including home maintainence, security and repair.
           </p>

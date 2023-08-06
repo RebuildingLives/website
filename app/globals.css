@@ -5,6 +5,7 @@
 :root {
   --primary-clr: #e2283a;
   --secondary-clr: #f3292b;
+  --accent-clr: #0085e2;
   --disabled-clr: #c6c6c6;
 }
 
@@ -12,12 +13,12 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Oswald Variable", sans-serif;
+  font-family: var(--font-bebas), sans-serif;
+  letter-spacing: 1px;
 }
 
 body {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-inter), sans-serif;
 }
 
 input[type="range"] {
@@ -229,4 +230,9 @@ input[type="range"]:focus::-ms-fill-upper {
   100% {
     transform: rotate(360deg);
   }
+}
+
+::selection {
+  color: red;
+  background: yellow;
 }

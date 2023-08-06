@@ -23,6 +23,15 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "components/modal/Modal.js", "hooks/useFetch.js"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "components/modal/Modal.js",
+    "hooks/useFetch.js",
+    "components/our-team/OurTeam.tsx",
+    "contentful/fetchers/fetchOurTeamContent.js"
+  ],
   "exclude": ["node_modules"]
 }

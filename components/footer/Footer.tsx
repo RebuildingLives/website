@@ -1,68 +1,15 @@
 import React from "react";
+import { navLinks, socialMediaLinks } from "./footer-data";
+import Image from "next/image";
+import Link from "next/link";
+import logo from "@/public/images/RLlogo.webp";
 
 const currentDate = new Date().getFullYear();
 
 export default function Footer() {
-  const socialMediaLinks = [
-    {
-      icon: (
-        <svg
-          className="h-5 w-5"
-          width={24}
-          height={24}
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          xmlns="http://www.w3.org/2000/svg">
-          {/* Insert the path for the social media icon */}
-        </svg>
-      ),
-      url: "#",
-    },
-    // Add other social media objects here
-  ];
-
-  const navLinks = [
-    {
-      title: "Products",
-      links: [
-        { label: "Overview", url: "#" },
-        { label: "Solutions", url: "#" },
-        { label: "Pricing", url: "#" },
-        { label: "Customers", url: "#" },
-      ],
-    },
-    {
-      title: "Company",
-      links: [
-        { label: "About", url: "#" },
-        { label: "Investor Relations", url: "#" },
-        { label: "Jobs", url: "#" },
-        { label: "Press", url: "#" },
-        { label: "Blog", url: "#" },
-      ],
-    },
-    {
-      title: "Support",
-      links: [
-        { label: "Contact", url: "#" },
-        { label: "Documentation", url: "#" },
-        { label: "Chat", url: "#" },
-        { label: "FAQ", url: "#" },
-      ],
-    },
-    {
-      title: "Legal",
-      links: [
-        { label: "Terms of Service", url: "#" },
-        { label: "Privacy Policy", url: "#" },
-        { label: "Cookie settings", url: "#" },
-      ],
-    },
-  ];
-
   return (
     <footer className="bg-white mt-12">
-      <div className="bg-secondary-clr py-6">
+      <div className="bg-accent-clr py-8">
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="flex flex-col items-center justify-between gap-2 md:flex-row">
             <div className="mb-3 text-center md:mb-0 md:text-left">
@@ -85,7 +32,17 @@ export default function Footer() {
         <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           <div className="mb-16 grid grid-cols-2 gap-12 md:grid-cols-4 lg:grid-cols-6 lg:gap-8">
             <div className="col-span-full lg:col-span-2">
-              <div className="mb-4 lg:-mt-2">LOGO HERE</div>
+              <div className="mb-4 lg:-mt-2">
+                <Link href="/">
+                  <Image
+                    className="mt-2 lg:my-0 p-2 mx-auto lg:mx-0"
+                    src={logo}
+                    width={170}
+                    height={100}
+                    alt="RBLUK logo"
+                  />
+                </Link>
+              </div>
               <p className="mb-6 text-gray-500 sm:pr-8">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia animi dolorum
                 incidunt sunt impedit repellendus est praesentium in voluptatibus aperiam?

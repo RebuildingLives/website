@@ -1,11 +1,10 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import FocusLock from "react-focus-lock";
 
 const dropDownLinksAboutUs = [
-  { id: 1, name: "Referral process", path: "/referrals", icon: "/icons/handshake.svg" },
-  { id: 2, name: "Our supporters", path: "/our-supporters", icon: "/icons/heart-donation.svg" },
+  { id: 1, name: "Vision/mission", path: "/mission", icon: "/icons/NCDVlogo.svg" },
+  { id: 2, name: "Referrals", path: "/referrals", icon: "/icons/handshake.svg" },
 ];
 
 const dropDownLinksOurTeam = [
@@ -33,7 +32,7 @@ export default function Dropdown({ id, itemProps }) {
             {...itemProps[id - 1]}
             href={path}
             className="flex justify-between items-center gap-4 hover:text-primary-clr font-bold">
-            <Image src={icon} width={30} height={30} alt="link icon" />
+            <Image src={icon} width={45} height={45} alt="link icon" />
             {name}
           </Link>
         );

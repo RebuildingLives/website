@@ -1,47 +1,36 @@
-import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+import RedLine from "../red-line/RedLine";
 
-export default function Section() {
+export default function Values() {
   return (
-    <section>
-      <h2 className="text-2xl font-bold sm:text-5xl text-center lg:mb-12 lg:mt-24 mt-12">Section 1</h2>
-      <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 ">
-        <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-          <div className="relative z-10 lg:py-16">
-            <div className="relative h-64 sm:h-80 lg:h-full">
-              <Image
-                width={500}
-                height={600}
-                alt="House"
-                src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-                className="absolute inset-0 h-full w-full object-cover"
-              />
-            </div>
-          </div>
-
-          <div className="relative flex items-center bg-gray-100">
-            <span className="hidden lg:absolute lg:inset-y-0 lg:-start-16 lg:block lg:w-16 lg:bg-gray-100"></span>
-
-            <div className="p-8 sm:p-16 lg:p-24">
-              <h2 className="text-2xl font-bold sm:text-3xl">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, debitis.
-              </h2>
-
-              <p className="mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, molestiae! Quidem
-                est esse numquam odio deleniti, beatae, magni dolores provident quaerat totam eos,
-                aperiam architecto eius quis quibusdam fugiat dicta.
-              </p>
-
-              <a
-                href="#"
-                className="mt-8 inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
-                Get in Touch
-              </a>
-            </div>
-          </div>
-        </div>
+    <section className="px-4">
+      <h2 className="text-heading font-bold text-center mt-24">The principles that drive us</h2>
+      <RedLine styles="mx-auto"/>
+      <br />
+      <br />
+      <div className="text-xl md:text-heading3 text-center space-y-4">
+        <p>
+          Our mission is to <strong>support survivors</strong>, fueled by compassion and trust.
+        </p>
+        <p>
+          Together, we strive for a <strong>world free from abuse</strong>.
+        </p>
+        <p>
+          We remain <strong>transparent</strong>, and hold ourselves <strong>accountable</strong>.
+        </p>
+        <p>
+          We are committed to <strong>diversity</strong>, <strong>equity</strong>, and{" "}
+          <strong>inclusion</strong>.
+        </p>
+        <br />
+        <Link href="/mission" className={btnStyles}>
+          Learn more who we are
+        </Link>
       </div>
     </section>
   );
 }
+
+const btnStyles =
+  "font-bold mx-auto mt-8 rounded bg-white px-12 py-3 text-sm font-medium text-primary shadow-xl active:translate-y-2 transition-transform duration-200 active:text-primary sm:w-auto border-2 border-secondary-clr hover:bg-primary-clr hover:text-white hover:border-primary-clr disabled:bg-disabled-clr mb-4 disabled:cursor-not-allowed disabled:border-disabled-clr disabled:text-white";
