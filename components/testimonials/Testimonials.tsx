@@ -4,7 +4,7 @@ import React from "react";
 export default function Testimonials() {
   return (
     <section>
-       <h2 className="text-2xl font-bold sm:text-5xl text-center my-12">Section 3</h2>
+       <h2 className="text-heading2 font-bold text-center my-12 lg:my-24">Section 3</h2>
       {/* Testimonials */}
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         {/* Grid */}

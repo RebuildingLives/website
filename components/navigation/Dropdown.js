@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const dropDownLinksAboutUs = [
+export const dropDownLinksAboutUs = [
   { id: 1, name: "Vision/mission", path: "/mission", icon: "/icons/NCDVlogo.svg" },
   { id: 2, name: "Referrals", path: "/referrals", icon: "/icons/handshake.svg" },
 ];
 
-const dropDownLinksOurTeam = [
+export const dropDownLinksOurTeam = [
   { id: 1, name: "Trustees", path: "/trustees", icon: "/icons/love.svg" },
   { id: 2, name: "Volunteers", path: "/volunteers", icon: "/icons/friends.svg" },
 ];
@@ -23,7 +23,7 @@ export default function Dropdown({ id, itemProps }) {
 
   return (
     <div
-      className="absolute top-[4.5rem] left-[-2rem] w-56 z-30 bg-white flex flex-col gap-4 justify-center items-start p-4 rounded-md shadow-md shadow-primary-clr"
+      className="absolute top-[3.5rem] left-[-2rem] w-56 z-30 bg-white flex flex-col gap-4 justify-center items-start p-4 rounded-md shadow-md shadow-primary-clr"
       role="menu">
       {links.map(({ id, name, icon, path }) => {
         return (

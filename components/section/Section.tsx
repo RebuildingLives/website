@@ -6,22 +6,25 @@ export default function Values() {
   return (
     <section className="px-4">
       <h2 className="text-heading font-bold text-center mt-24">The principles that drive us</h2>
-      <RedLine styles="mx-auto"/>
+      <RedLine styles="mx-auto" />
       <br />
       <br />
-      <div className="text-xl md:text-heading3 text-center space-y-4">
+      <div className="text-xl md:text-heading3 text-center space-y-8 py-12">
         <p>
-          Our mission is to <strong>support survivors</strong>, fueled by compassion and trust.
+          We believe that <strong>everyone deserves</strong> a secure, warm, relaxing and
+          comfortable home environment.
         </p>
         <p>
-          Together, we strive for a <strong>world free from abuse</strong>.
+          We are passionate about the <strong>prevention</strong> of domestic abuse and other
+          associated forms of abuse.
         </p>
         <p>
-          We remain <strong>transparent</strong>, and hold ourselves <strong>accountable</strong>.
+          We believe survivors <strong>can rebuild their lives</strong> through empowerment and
+          positive change.
         </p>
         <p>
-          We are committed to <strong>diversity</strong>, <strong>equity</strong>, and{" "}
-          <strong>inclusion</strong>.
+          We support all individuals and <strong>never discriminate</strong>. We are inclusive and
+          non-biased.
         </p>
         <br />
         <Link href="/mission" className={btnStyles}>

@@ -3,8 +3,8 @@ import Link from "next/link";
 /* eslint-disable @next/next/no-img-element */
 const NewsCard = ({ card, styles }: { card: any; styles: string }) => (
   <article
-    className={`${styles} flex flex-col min-h-[400px] bg-white shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-800 ease-in-out`}>
-    <div className="w-full h-56">
+    className={`${styles} flex flex-col bg-white shadow-md hover:shadow-xl hover:-translate-y-2 transition-all duration-800 ease-in-out`}>
+    <div className="w-full md:h-56">
       <img
         className="object-cover object-center w-full h-full"
         src={card?.featuredImage?.src}
@@ -16,7 +16,7 @@ const NewsCard = ({ card, styles }: { card: any; styles: string }) => (
     </div>
 
     <div className="flex flex-col p-4 gap-2">
-      <h3 className="text-heading3 font-bold">{card.title}</h3>
+      <h3 className="text-heading2 font-bold">{card.title}</h3>
       <p className="whitespace-nowrap overflow-hidden overflow-ellipsis">{card.description}</p>
       <Link
         className="my-4 underline font-bold flex justify-center items-center"

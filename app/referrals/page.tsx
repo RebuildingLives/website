@@ -4,6 +4,7 @@ import referralsBanner from "@/public/images/referral-banner.webp";
 import Article from "@/components/article/Article";
 import Image from "next/image";
 import NCDVlogo from "@/public/icons/NCDV-yellow.webp";
+import RedLine from "@/components/red-line/RedLine";
 
 const icon = (
   <svg
@@ -46,6 +47,7 @@ const Referrals = () => {
       <Article>
         <br />
         <h1 className="text-heading2 text-center">Referral process</h1>
+        <RedLine styles="mx-auto" />
         <p>
           As a blossoming charity, we are committed to constant learning and evolution in our
           mission to support as many survivors as possible through trauma-informed practices.

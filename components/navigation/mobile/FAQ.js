@@ -41,7 +41,9 @@ export default function FAQ({ menuContent }) {
         {menuContent.links.map(link => {
           return (
             <li key={link.id}>
-              <Link href={link.path}>{link.name}</Link>
+              <Link onClick={() => setIsOpen(false)} href={link.path}>
+                {link.name}
+              </Link>
             </li>
           );
         })}

@@ -69,14 +69,14 @@ export default function Hero() {
             providing practical support including home maintainence, security and repair.
           </p>
           <div className="mt-8 flex flex-wrap gap-4 text-center">
-            <Link
+            {/* <Link
               href="#"
               className={`bg-primary-clr text-white ${linkCommonStyles} hover:bg-white hover:text-primary-clr active:bg-primary-clr`}>
               Get Started
-            </Link>
+            </Link> */}
 
             <Link
-              href="#"
+              href="/volunteers"
               className={`bg-white text-primary-clr ${linkCommonStyles} hover:bg-primary-clr hover:text-white active:text-primary-clr`}>
               Join the team
             </Link>

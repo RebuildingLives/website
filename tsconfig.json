@@ -32,6 +32,6 @@
     "hooks/useFetch.js",
     "components/our-team/OurTeam.tsx",
     "contentful/fetchers/fetchOurTeamContent.js"
-  ],
+, "app/donate/page.js"  ],
   "exclude": ["node_modules"]
 }

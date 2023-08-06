@@ -1,27 +1,28 @@
 import Image from "next/image";
 import logo from "@/public/images/RLlogo.webp";
 import FAQ from "./FAQ";
+import { dropDownLinksAboutUs, dropDownLinksOurTeam } from "@/components/navigation/Dropdown";
 
 const menuItems = [
   {
     id: 1,
-    heading: "How can we help ?",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!",
-    links: [
-      {id:1, name: 'link', path: ''},
-      {id:2, name: 'link', path: ''},
-      {id:3, name: 'link', path: ''},
-    ]
+    heading: "About us",
+    links: dropDownLinksAboutUs,
   },
   {
     id: 2,
+    heading: "Our team",
+    links: dropDownLinksOurTeam,
+  },
+  {
+    id: 3,
+    heading: "Survivor stories",
+    links: [{ id: 1, name: "individual story here", path: "/survivor-stories" }],
+  },
+  {
+    id: 3,
     heading: "Support us",
-    text: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa in, recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo consequuntur distinctio corporis earum similique!",
-    links: [
-      {id:1, name: 'link', path: ''},
-      {id:2, name: 'link', path: ''},
-      {id:3, name: 'link', path: ''},
-    ]
+    links: [{ id: 1, name: "Donate", path: "/donate" }],
   },
 ];
 
@@ -31,12 +32,14 @@ export default function Menu({ isOpen, setIsOpen }) {
     <>
       <div
         aria-label="navigation"
-        className={`fixed inset-0 z-40 w-full bg-white ${transition} ease [transition:opacity_700ms,visibility_700ms] border-2 border-primary-clr`}>
+        className={`fixed inset-0 z-40 w-full bg-white ${transition} ease [transition:opacity_700ms,visibility_700ms] border-2 border-primary-clr`}
+        aria-hidden={!isOpen}
+        close="true">
         <Image
           className="mx-auto mt-4 lg:my-0"
           src={logo}
           width={180}
-          height={40}
+          height={190}
           alt="RBLUK logo"
         />
         <nav id="menuItems" aria-label="navigation" className="relative z-20 h-full w-full text-md">
@@ -46,7 +49,7 @@ export default function Menu({ isOpen, setIsOpen }) {
           {/* FAQ */}
           <div className="space-y-4">
             {menuItems.map(menuItem => {
-              return <FAQ key={menuItem.id} menuContent={menuItem} />;
+              return <FAQ key={menuItem.id} menuContent={menuItem} setIsOpen={setIsOpen} />;
             })}
           </div>
           <hr className="mx-auto w-3/4 mt-12 border-gray-900" />
@@ -56,18 +59,17 @@ export default function Menu({ isOpen, setIsOpen }) {
           <ul className="mt-2 items-center gap-4 flex justify-center">
             <li>
               <span className="sr-only">F</span>
-              <a rel="noopener" target="_blank" href=''>
+              <a rel="noopener" target="_blank" href="">
                 social media icon
               </a>
             </li>
             <li>
               <span className="sr-only">F</span>
-              <a rel="noopener" target="_blank" href=''>
+              <a rel="noopener" target="_blank" href="">
                 social media icon
               </a>
             </li>
           </ul>
-
         </nav>
       </div>
       {isOpen && (

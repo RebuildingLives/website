@@ -5,7 +5,7 @@ import { fetchLatesNewsContent } from "@/contentful/fetchers/fetchLatestsNewsCon
 import NewsCard from "./NewsCard";
 
 const commonStyles =
-  "col-span-2 md:col-span-1 xl:col-span-2 row-span-1 shadow-md border-t-primary-clr border-t-8";
+  "col-span-2 md:col-span-1 xl:col-span-2 row-span-1 md:shadow-md border-t-primary-clr border-t-8";
 
 const News = async () => {
   const latestsNews = await fetchLatesNewsContent({ preview: draftMode().isEnabled });
@@ -32,12 +32,12 @@ const News = async () => {
       <br />
       <br />
       <br />
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 grid-rows-1 md:grid-rows-2 gap-8">
+      <div className="grid grid-cols-2 xl:grid-cols-4 grid-rows-1 md:grid-rows-2 gap-4 md:gap-8">
         {latestsNews.map((news, index) => {
           const styles =
             index === 0 || index === 5
               ? commonStyles
-              : `col-span-2 md:col-span-1 row-span-1 shadow-md border-t-8`;
+              : `col-span-1 row-span-1 md:shadow-md border-t-8`;
 
           return <NewsCard key={index} card={news} styles={styles} />;
         })}

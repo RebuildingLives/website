@@ -5,6 +5,7 @@ import Article from "@/components/article/Article";
 
 import { data } from "./data";
 import Image from "next/image";
+import RedLine from "@/components/red-line/RedLine";
 
 const OurVision = () => {
   return (
@@ -12,6 +13,7 @@ const OurVision = () => {
       <Article>
         <br />
         <h2 className="text-heading2 text-center">What we stand for</h2>
+        <RedLine styles="mx-auto" />
         <p>
           Rebuilding Lives UK provides partial or complete funding for home repairs and maintenance
           for domestic abuse victims. As part of our safeguarding process, we use a network of
@@ -32,13 +34,24 @@ const OurVision = () => {
           survivors this way.
         </p>
         <h2 className="text-heading2 text-center">Values</h2>
-        <ul>
-          {data.map(({ title, icon }, index) => (
-            <li className="flex items-center font-medium text-lg" key={index}>
-              <Image src={icon.src} alt={title} width={75} height={75} />
-              {title}
-            </li>
-          ))}
+        <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 md:place-items-center">
+          {data.map(({ title, icon }, index) => {
+            if (index < data.length - 1) {
+              return (
+                <li className="flex items-center font-medium text-lg" key={index}>
+                  <Image src={icon.src} alt={title} width={75} height={75} />
+                  {title}
+                </li>
+              );
+            } else {
+              return (
+                <li className="md:col-span-2 flex items-center font-medium text-lg" key={index}>
+                  <Image src={icon.src} alt={title} width={75} height={75} />
+                  {title}
+                </li>
+              );
+            }
+          })}
         </ul>
       </Article>
     </SubPage>
