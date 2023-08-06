@@ -4,26 +4,14 @@ import { notFound } from "next/navigation";
 import { fetchTeamMember, fetchTeamMembers } from "../../contentful/fetchers/fetchOurTeamContent";
 import Link from "next/link";
 import RichText from "../../contentful/RichText";
-import { TeamMember } from "@/contentful/fetchOurTeamContent";
 
-interface TeamMemberPageParams {
-  slug: string;
-}
-
-interface TeamMemberPageProps {
-  params: TeamMemberPageParams;
-}
-
-export async function generateStaticParams(): Promise<TeamMemberPageParams[]> {
+export async function generateStaticParams() {
   const teamMembers = await fetchTeamMembers({ preview: false });
 
   return teamMembers.map(teamMember => ({ slug: teamMember.slug }));
 }
 
-export async function generateMetadata(
-  { params }: TeamMemberPageProps,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+export async function generateMetadata({ params }) {
   const teamMember = await fetchTeamMember({ slug: params.slug, preview: draftMode().isEnabled });
 
   if (!teamMember) {
@@ -35,8 +23,8 @@ export async function generateMetadata(
   };
 }
 
-async function TeamMemberPage({ params }: TeamMemberPageProps) {
-  const teamMember: TeamMember | null = await fetchTeamMember({
+async function TeamMemberPage({ params }) {
+  const teamMember = await fetchTeamMember({
     slug: params.slug,
     preview: draftMode().isEnabled,
   });
