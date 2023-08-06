@@ -1,9 +1,17 @@
+"use client";
+
 import Link from "next/link";
 
-export default function FAQ({ menuContent }) {
+export default function FAQ({ menuContent, setIsOpen, id, activeTab, onSetActiveTab }) {
   return (
-    <details className="group rounded-lg bg-gray-50 p-6" close>
-      <summary className="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
+    <details
+      onClick={e => {
+        e.preventDefault();
+        onSetActiveTab(id);
+      }}
+      className="group rounded-lg bg-gray-50 p-6"
+      open={activeTab}>
+      <summary className="flex cursor-pointer items-center justify-between gap-1.5">
         <h2 className="text-2xl text-primary-clr font-medium">{menuContent.heading}</h2>
 
         <span className="relative h-5 w-5 shrink-0">
@@ -37,10 +45,10 @@ export default function FAQ({ menuContent }) {
         </span>
       </summary>
 
-      <ul className="mt-4 leading-relaxed text-gray-700 flex- flex-col">
+      <ul className="mt-4 text-lg">
         {menuContent.links.map(link => {
           return (
-            <li key={link.id}>
+            <li className="my-2" key={link.id}>
               <Link onClick={() => setIsOpen(false)} href={link.path}>
                 {link.name}
               </Link>

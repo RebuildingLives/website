@@ -13,7 +13,7 @@ export const listItems = [
         width={35}
         height={35}
         xmlns="http://www.w3.org/2000/svg"
-        enable-background="new 0 0 50 50"
+        enableBackground="new 0 0 50 50"
         viewBox="0 0 50 50"
         id="family">
         <circle cx="40.292" cy="13.248" r="2.686"></circle>

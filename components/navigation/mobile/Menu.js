@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import logo from "@/public/images/RLlogo.webp";
 import FAQ from "./FAQ";
@@ -20,13 +23,15 @@ const menuItems = [
     links: [{ id: 1, name: "individual story here", path: "/survivor-stories" }],
   },
   {
-    id: 3,
+    id: 4,
     heading: "Support us",
     links: [{ id: 1, name: "Donate", path: "/donate" }],
   },
 ];
 
 export default function Menu({ isOpen, setIsOpen }) {
+  const [activeTab, setActiveTab] = useState(null);
+
   const transition = isOpen ? "opacity-100" : "opacity-0 ";
   return (
     <>
@@ -38,23 +43,28 @@ export default function Menu({ isOpen, setIsOpen }) {
         <Image
           className="mx-auto mt-4 lg:my-0"
           src={logo}
-          width={180}
-          height={190}
-          alt="RBLUK logo"
+          width={100}
+          height={100}
+          alt="Rebuilding lives logo"
         />
         <nav id="menuItems" aria-label="navigation" className="relative z-20 h-full w-full text-md">
-          {/* loop */}
           <hr className="mx-auto w-3/4 my-8 border-gray-900" />
 
-          {/* FAQ */}
           <div className="space-y-4">
             {menuItems.map(menuItem => {
-              return <FAQ key={menuItem.id} menuContent={menuItem} setIsOpen={setIsOpen} />;
+              return (
+                <FAQ
+                  key={menuItem.id}
+                  id={menuItem.id}
+                  activeTab={activeTab === menuItem.id}
+                  onSetActiveTab={setActiveTab}
+                  menuContent={menuItem}
+                  setIsOpen={setIsOpen}
+                />
+              );
             })}
           </div>
           <hr className="mx-auto w-3/4 mt-12 border-gray-900" />
-
-          {/* SOCIAL MEDIA */}
 
           <ul className="mt-2 items-center gap-4 flex justify-center">
             <li>
@@ -76,7 +86,7 @@ export default function Menu({ isOpen, setIsOpen }) {
         <button
           className="fixed bottom-4 left-1/2 -translate-x-1/2 -translate-y-1/2 transform z-40 bg-primary-clr text-white uppercase px-4 py-2"
           type="button"
-          onClick={() => setIsOpen(false)}>
+          onClick={e => setIsOpen(false)}>
           close
           <span className="sr-only">Close Mobile Menu</span>
         </button>
