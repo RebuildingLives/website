@@ -65,7 +65,7 @@ const Referrals = () => {
           within the reach of every individual. Together, we can create a brighter, more
           compassionate future.
         </p>
-        <div className="float-right">
+        <div className="float-right pb-12">
           <Image
             className="float-left mr-4"
             src={NCDVlogo}
@@ -82,10 +82,8 @@ const Referrals = () => {
             NCDV.
           </p>
         </div>
-        <br />
-        <br />
-        <br />
-        <h3 className="text-heading3 text-center">
+    
+        <h3 className="text-heading2 text-center">
           Complete our online referral form at{" "}
           <a className="text-primary-clr" href="www.ncdv.org.uk" target="_blank" rel="noopener">
             www.ncdv.org.uk

@@ -15,7 +15,7 @@ export default function Hamburger() {
         aria-controls="menuItems"
         aria-expanded={isMenuOpen ? "true" : "false"}
         title="Open Menu"
-        className="flex h-12 w-12 flex-col items-center justify-center rounded-full pt-2 mr-2 lg:hidden"
+        className="flex h-12 w-12 flex-col items-center justify-center rounded-full pt-2 mr-2 lg:hidden z-50"
         onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <div
           className={`${genericHamburgerLine} ${

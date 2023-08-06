@@ -33,7 +33,7 @@ const Partners = () => {
           </div>
         </div>
         <div className="md:hidden">
-          <Marquee autoFill={true} className="flex justify-center items-center mt-8 md:mt-24" speed={20}>
+          <Marquee autoFill={true} className="flex justify-center items-center mt-8 md:mt-24" speed={10}>
             {logos.map((logo, index) => (
               <div key={index} className="px-8">
                 <Image

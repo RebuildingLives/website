@@ -37,5 +37,5 @@ const OurWork = () => {
 
 export default OurWork;
 
-const btnStyles =
-  "block w-fit mx-auto mt-8 rounded bg-white px-12 py-3 text-sm font-medium text-primary shadow-xl active:translate-y-2 transition-transform duration-200 active:text-primary border-2 border-secondary-clr hover:bg-primary-clr hover:text-white hover:border-primary-clr mb-4";
+  const btnStyles =
+    "block w-fit mx-auto mt-2 md:mt-8 rounded bg-white px-12 py-3 text-sm font-medium text-primary shadow-xl active:translate-y-2 transition-transform duration-200 active:text-primary border-2 border-secondary-clr hover:bg-primary-clr hover:text-white hover:border-primary-clr mb-4";

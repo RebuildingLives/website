@@ -5,11 +5,11 @@ import RedLine from "../red-line/RedLine";
 export default function Values() {
   return (
     <section className="px-4">
-      <h2 className="text-heading font-bold text-center mt-24">The principles that drive us</h2>
+      <h2 className="text-heading font-bold text-center mt-12 md:mt-24">The principles that drive us</h2>
       <RedLine styles="mx-auto" />
       <br />
       <br />
-      <div className="text-xl md:text-heading3 text-center space-y-8 py-12">
+      <div className="text-xl md:text-heading3 text-center space-y-8 py-8">
         <p>
           We believe that <strong>everyone deserves</strong> a secure, warm, relaxing and
           comfortable home environment.

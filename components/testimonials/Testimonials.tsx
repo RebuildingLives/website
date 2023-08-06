@@ -1,29 +1,57 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
+
+import survivorHouse from "@/public/images/survivors/survivor-damaged-house.webp";
+import survivorHouse1 from "@/public/images/survivors/survivor-damaged-house1.webp";
+import survivorHouse2 from "@/public/images/survivors/survivor-damaged-house2.webp";
+import survivorHouse3 from "@/public/images/survivors/survivor-damaged-house3.webp";
 
 export default function Testimonials() {
   return (
     <section>
-       <h2 className="text-heading2 font-bold text-center my-12 lg:my-24">Section 3</h2>
-      {/* Testimonials */}
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-        {/* Grid */}
+      <h2 className="text-heading2 font-bold text-center mt-12 lg:mt-20">Survivors story</h2>
+      <div className="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
-          <div className="hidden md:block mb-24 md:mb-0 sm:px-6">
-            <div className="relative">
-              <Image
-                width={600}
-                height={800}
-                className="rounded-xl"
-                src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=500&h=600&q=80"
-                alt="Image Description"
-              />
-              {/* SVG Element */}
-            </div>
+          <div className="grid grid-cols-2 grid-row-2 gap-8 place-items-center mb-12 md:mb-0">
+            <Image
+              className="h-56 object-cover shadow-md"
+              width={survivorHouse.width}
+              height={survivorHouse.height}
+              placeholder="blur"
+              blurDataURL={survivorHouse.blurDataURL}
+              src={survivorHouse.src}
+              alt=""
+            />
+            <Image
+              className="h-56 object-cover shadow-md"
+              width={survivorHouse1.width}
+              height={survivorHouse1.height}
+              placeholder="blur"
+              blurDataURL={survivorHouse1.blurDataURL}
+              src={survivorHouse1.src}
+              alt=""
+            />
+            <Image
+              className="h-56 object-cover shadow-md"
+              width={survivorHouse2.width}
+              height={survivorHouse2.height}
+              placeholder="blur"
+              blurDataURL={survivorHouse2.blurDataURL}
+              src={survivorHouse2.src}
+              alt=""
+            />
+            <Image
+              className="h-56 object-cover shadow-md"
+              width={survivorHouse3.width}
+              height={survivorHouse3.height}
+              placeholder="blur"
+              blurDataURL={survivorHouse3.blurDataURL}
+              src={survivorHouse3.src}
+              alt=""
+            />
           </div>
-          {/* End Col */}
           <div>
-            {/* Blockquote */}
             <blockquote className="relative">
               <svg
                 className="absolute top-0 left-0 transform -translate-x-8 -translate-y-4 h-24 w-24 text-gray-200 dark:text-gray-700"
@@ -39,49 +67,25 @@ export default function Testimonials() {
                 />
               </svg>
               <div className="relative z-10">
-                <p className="text-xs font-semibold text-gray-500 tracking-wide uppercase mb-3 dark:text-gray-200">
-                  Survivor stories
+                <p className="text-xs font-semibold text-secondary-clr tracking-wide uppercase mb-3 dark:text-gray-200">
+                  Survivor J story
                 </p>
-                <p className="text-xl font-medium italic text-gray-800 md:text-2xl md:leading-normal xl:text-3xl xl:leading-normal dark:text-gray-200">
-                  I have suffered horrific abuse now for many years. But it didn’t start off that
-                  way, for the first 6 months I couldn’t believe my luck, I thought I had found
-                  love.
+                <p className="text-xl font-medium italic md:text-2xl">
+                  Upon arrival, signs of violence were evident at the beneficiary’s house,
+                  particularly upstairs, where her partner had caused extensive damage....
                 </p>
               </div>
-              <footer className="mt-6">
-                <div className="flex items-center">
-                  <div className="md:hidden flex-shrink-0">
-                    <Image
-                      width={50}
-                      height={50}
-                      className="h-12 w-12 rounded-full"
-                      src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                      alt="Image Description"
-                    />
-                  </div>
-                  <div className="ml-4 md:ml-0">
-                    <div className="text-base font-semibold text-gray-800 dark:text-gray-200">
-                      Nicole Grazioso
-                    </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">Builder</div>
-                  </div>
-                </div>
-              </footer>
-              <div className="mt-8 lg:mt-14">
-                <a
-                  className="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-gray-800 text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2 transition-all text-sm lg:p-4 dark:focus-visible:ring-offset-gray-800"
-                  href="#">
-                  Read the story
-                </a>
-              </div>
+
+              <Link className={btnStyles} href="/survivor-story">
+                Read the story
+              </Link>
             </blockquote>
-            {/* End Blockquote */}
           </div>
-          {/* End Col */}
         </div>
-        {/* End Grid */}
       </div>
-      {/* End Testimonials */}
     </section>
   );
 }
+
+const btnStyles =
+  "block w-fit mx-auto mt-8 rounded bg-white px-12 py-3 text-sm font-medium text-primary shadow-xl active:translate-y-2 transition-transform duration-200 active:text-primary border-2 border-secondary-clr hover:bg-primary-clr hover:text-white hover:border-primary-clr mb-4";
