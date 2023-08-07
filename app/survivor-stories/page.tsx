@@ -50,7 +50,7 @@ const SurvivorsStory = () => {
         </div>
       </div>
       <br />
-      <Article>
+      {/* <Article>
         <h2 className="text-heading2 text-center">Survivor J story</h2>
         <p>
           Upon arrival, signs of violence were evident at the beneficiary’s house, particularly
@@ -71,7 +71,7 @@ const SurvivorsStory = () => {
           hands-on work. Dulux’s paint decoration enabled the survivor to decorate and pay
           electrical expenses.
         </p>
-      </Article>
+      </Article> */}
       <br />
     </SubPage>
   );

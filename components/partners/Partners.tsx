@@ -12,7 +12,7 @@ const logos = [logo1, logo2, logo3, logo4, logo5];
 const Partners = () => {
   return (
     <section>
-      <div className="relative mb-4 items-center w-full py-12 mx-auto max-w-7xl">
+      <div className="relative mb-4 items-center w-full py-12 mt-12 mx-auto max-w-7xl">
         <h2 className="text-heading2 text-center">Our partners</h2>
 
         <div className="mx-auto hidden md:block">
