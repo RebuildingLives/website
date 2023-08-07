@@ -28,7 +28,7 @@ const SurvivorsStory = () => {
         <div className="h-96 w-96">
           <Image
             className="h-full object-fit"
-            src={thankYouCard1.src}
+            src="/images/Thank you-card-from-survivors-children.webp"
             width={thankYouCard1.width}
             height={500}
             placeholder="blur"
@@ -40,7 +40,7 @@ const SurvivorsStory = () => {
         <div className="h-96 w-96">
           <Image
             className="h-full object-fit transform -rotate-90"
-            src={thankYouCard2.src}
+            src="/images/survivor-thank you card.webp"
             width={thankYouCard2.width}
             height={500}
             placeholder="blur"
