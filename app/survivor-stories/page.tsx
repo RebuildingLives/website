@@ -3,8 +3,8 @@ import SubPage from "@/components/sub-page/SubPage";
 import React from "react";
 import Image from "next/image";
 import thankYouCard1 from "@/public/images/Thank you-card-from-survivors-children.webp";
-import thankYouCard2 from "@/public/images/survivor-thank you card.webp";
-import survivorsStoryBanner from "@/public/images/survivors-story-banner.webp";
+import thankYouCard2 from "@/public/images/survivorthankyoucard.webp";
+import survivorsStoryBanner from "@/public/images/survivorsstorybanner.webp";
 import RedLine from "@/components/red-line/RedLine";
 
 const SurvivorsStory = () => {
@@ -28,9 +28,9 @@ const SurvivorsStory = () => {
         <div className="h-96 w-96">
           <Image
             className="h-full object-fit"
-            src="/images/Thank you-card-from-survivors-children.webp"
+            src={thankYouCard1.src}
             width={thankYouCard1.width}
-            height={500}
+            height={thankYouCard1.height}
             placeholder="blur"
             blurDataURL={thankYouCard1.blurDataURL}
             alt="Thank you card from survivors children"
@@ -40,9 +40,9 @@ const SurvivorsStory = () => {
         <div className="h-96 w-96">
           <Image
             className="h-full object-fit transform -rotate-90"
-            src="/images/survivor-thank you card.webp"
+            src={thankYouCard2.src}
             width={thankYouCard2.width}
-            height={500}
+            height={thankYouCard2.height}
             placeholder="blur"
             blurDataURL={thankYouCard2.blurDataURL}
             alt="thank you card from survivor"
@@ -50,7 +50,7 @@ const SurvivorsStory = () => {
         </div>
       </div>
       <br />
-      {/* <Article>
+      <Article>
         <h2 className="text-heading2 text-center">Survivor J story</h2>
         <p>
           Upon arrival, signs of violence were evident at the beneficiary’s house, particularly
@@ -71,7 +71,7 @@ const SurvivorsStory = () => {
           hands-on work. Dulux’s paint decoration enabled the survivor to decorate and pay
           electrical expenses.
         </p>
-      </Article> */}
+      </Article>
       <br />
     </SubPage>
   );

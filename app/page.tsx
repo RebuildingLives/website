@@ -34,7 +34,7 @@ export default function Home() {
       {/* <LazySection1 /> */}
       <LazyHistory />
       {/* <LazyTestimonials /> */}
-      <Partners />
+      {/* <Partners /> */}
       <LazyNews />
     </>
   );
