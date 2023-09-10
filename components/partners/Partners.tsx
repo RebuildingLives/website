@@ -19,21 +19,16 @@ const Partners = () => {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 place-items-center gap-8">
             {logos.map((logo, index) => (
               <div key={index} className="px-8">
-                <Image
-                  width={logo.width}
-                  height={logo.height}
-                  placeholder="blur"
-                  blurDataURL={logo.blurDataURL}
-                  className="w-full"
-                  src={logo.src}
-                  alt={`logo-${index}`}
-                />
+                <Image className="w-full" src={logo.src} alt={`logo-${index}`} />
               </div>
             ))}
           </div>
         </div>
         <div className="md:hidden">
-          <Marquee autoFill={true} className="flex justify-center items-center mt-8 md:mt-24" speed={10}>
+          <Marquee
+            autoFill={true}
+            className="flex justify-center items-center mt-8 md:mt-24"
+            speed={10}>
             {logos.map((logo, index) => (
               <div key={index} className="px-8">
                 <Image

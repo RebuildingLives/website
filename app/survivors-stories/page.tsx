@@ -10,12 +10,12 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Survivors' Stories | Inspiring Journeys of Resilience",
-  description: "Explore the inspiring stories of survivors who have overcome domestic abuse. Discover their journeys of resilience, strength, and hope.",
+  description:
+    "Explore the inspiring stories of survivors who have overcome domestic abuse. Discover their journeys of resilience, strength, and hope.",
   alternates: {
     canonical: "survivors-stories",
   },
 };
-
 
 const SurvivorsStory = () => {
   return (
@@ -39,10 +39,6 @@ const SurvivorsStory = () => {
           <Image
             className="h-full object-fit"
             src={thankYouCard1.src}
-            width={thankYouCard1.width}
-            height={thankYouCard1.height}
-            placeholder="blur"
-            blurDataURL={thankYouCard1.blurDataURL}
             alt="Thank you card from survivors children"
           />
         </div>
@@ -51,10 +47,6 @@ const SurvivorsStory = () => {
           <Image
             className="h-full object-fit transform -rotate-90"
             src={thankYouCard2.src}
-            width={thankYouCard2.width}
-            height={thankYouCard2.height}
-            placeholder="blur"
-            blurDataURL={thankYouCard2.blurDataURL}
             alt="thank you card from survivor"
           />
         </div>

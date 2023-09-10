@@ -14,42 +14,10 @@ export default function Testimonials() {
       <div className="max-w-7xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="md:grid md:grid-cols-2 md:gap-10 lg:gap-16 md:items-center">
           <div className="grid grid-cols-2 grid-row-2 gap-8 place-items-center mb-12 md:mb-0">
-            <Image
-              className="h-56 object-cover shadow-md"
-              width={survivorHouse.width}
-              height={survivorHouse.height}
-              placeholder="blur"
-              blurDataURL={survivorHouse.blurDataURL}
-              src={survivorHouse.src}
-              alt=""
-            />
-            <Image
-              className="h-56 object-cover shadow-md"
-              width={survivorHouse1.width}
-              height={survivorHouse1.height}
-              placeholder="blur"
-              blurDataURL={survivorHouse1.blurDataURL}
-              src={survivorHouse1.src}
-              alt=""
-            />
-            <Image
-              className="h-56 object-cover shadow-md"
-              width={survivorHouse2.width}
-              height={survivorHouse2.height}
-              placeholder="blur"
-              blurDataURL={survivorHouse2.blurDataURL}
-              src={survivorHouse2.src}
-              alt=""
-            />
-            <Image
-              className="h-56 object-cover shadow-md"
-              width={survivorHouse3.width}
-              height={survivorHouse3.height}
-              placeholder="blur"
-              blurDataURL={survivorHouse3.blurDataURL}
-              src={survivorHouse3.src}
-              alt=""
-            />
+            <Image className="h-56 object-cover shadow-md" src={survivorHouse.src} alt="" />
+            <Image className="h-56 object-cover shadow-md" src={survivorHouse1.src} alt="" />
+            <Image className="h-56 object-cover shadow-md" src={survivorHouse2.src} alt="" />
+            <Image className="h-56 object-cover shadow-md" src={survivorHouse3.src} alt="" />
           </div>
           <div>
             <blockquote className="relative">

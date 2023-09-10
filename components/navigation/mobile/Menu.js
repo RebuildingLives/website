@@ -4,19 +4,19 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import logo from "@/public/images/RLlogo.webp";
 import FAQ from "./FAQ";
-import { dropDownLinksAboutUs, dropDownLinksOurTeam } from "@/components/navigation/Dropdown";
+import { aboutLinks, ourTeamLinks } from "@/components/navigation/links";
 import SocialMediaLinks from "@/components/social-media-links/SocialMediaLinks";
 
 const menuItems = [
   {
     id: 1,
     heading: "About us",
-    links: dropDownLinksAboutUs,
+    links: aboutLinks,
   },
   {
     id: 2,
     heading: "Our team",
-    links: dropDownLinksOurTeam,
+    links: ourTeamLinks,
   },
   {
     id: 3,
