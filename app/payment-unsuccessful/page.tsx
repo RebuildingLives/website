@@ -1,5 +1,14 @@
 import { verySadEmotionFaceIcon } from "@/public/icons/iconsList";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Rebuilding Lives | Supporting Survivors of Domestic Abuse",
+  description: "Payment unsuccessful. Please try again or contact support for assistance.",
+  alternates: {
+    canonical: "payment-unsuccessful",
+  },
+};
 
 const CancelledPayment = () => {
   return (

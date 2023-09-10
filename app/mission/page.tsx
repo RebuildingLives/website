@@ -6,6 +6,16 @@ import Article from "@/components/article/Article";
 import { data } from "./data";
 import Image from "next/image";
 import RedLine from "@/components/red-line/RedLine";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Our Mission and Purpose | Ending Domestic Abuse",
+  description: "Learn about our unwavering commitment to ending domestic abuse. Discover our mission, values, and the steps we're taking to create a world free from domestic violence.",
+  alternates: {
+    canonical: "mission",
+  },
+};
+
 
 const OurVision = () => {
   return (

@@ -41,7 +41,7 @@ export default function DonateBox({ styles = "", showClosebtn, onCloseDonationBo
     <div
       className={`${styles} w-full h-full px-4 flex flex-col justify-center mx-auto rounded bg-white`}>
       {showClosebtn && (
-        <button onClick={() => onCloseDonationBox(false)} className="absolute top-4 right-4 ">
+        <button onClick={() => onCloseDonationBox(false)} className="absolute top-4 left-4 ">
           <Image src={closeBtn} width={25} height={25} alt="close button" />
         </button>
       )}

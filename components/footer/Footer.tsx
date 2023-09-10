@@ -3,6 +3,7 @@ import { navLinks, socialMediaLinks } from "./footer-data";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/public/images/RLlogo.webp";
+import Newsletter from "./Newsletter";
 
 const currentDate = new Date().getFullYear();
 
@@ -15,16 +16,11 @@ export default function Footer() {
             <div className="mb-3 text-center md:mb-0 md:text-left">
               <span className="font-bold uppercase tracking-widest text-gray-100">Newsletter</span>
               <p className="text-indigo-200">Subscribe to our newsletter</p>
+              <small>
+                <Link href="/tc">T&C applies</Link>
+              </small>
             </div>
-            <form className="flex w-full gap-2 md:max-w-md">
-              <input
-                placeholder="Email"
-                className="w-full flex-1 rounded border border-white px-3 py-2 text-white placeholder-indigo-100 outline-none transition duration-100 focus:ring"
-              />
-              <button className="inline-block rounded bg-white px-8 py-2 text-center text-sm font-semibold outline-none transition duration-100 hover:bg-gray-100 focus-visible:ring  md:text-base">
-                Send
-              </button>
-            </form>
+            <Newsletter />
           </div>
         </div>
       </div>

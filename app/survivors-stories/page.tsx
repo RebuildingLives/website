@@ -6,6 +6,16 @@ import thankYouCard1 from "@/public/images/Thank you-card-from-survivors-childre
 import thankYouCard2 from "@/public/images/survivorthankyoucard.webp";
 import survivorsStoryBanner from "@/public/images/survivorsstorybanner.webp";
 import RedLine from "@/components/red-line/RedLine";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Survivors' Stories | Inspiring Journeys of Resilience",
+  description: "Explore the inspiring stories of survivors who have overcome domestic abuse. Discover their journeys of resilience, strength, and hope.",
+  alternates: {
+    canonical: "survivors-stories",
+  },
+};
+
 
 const SurvivorsStory = () => {
   return (

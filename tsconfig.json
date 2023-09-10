@@ -31,7 +31,10 @@
     "components/modal/Modal.js",
     "hooks/useFetch.js",
     "components/our-team/OurTeam.tsx",
-    "contentful/fetchers/fetchOurTeamContent.js"
-, "app/donate/page.js", "app/[slug]/page.js"  ],
+    "contentful/fetchers/fetchOurTeamContent.js",
+    "app/donate/page.tsx",
+    "app/trustees/[slug]/page.tsx",
+    "components/footer/Newsletter.js"
+  ],
   "exclude": ["node_modules"]
 }

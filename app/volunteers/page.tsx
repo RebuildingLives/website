@@ -3,6 +3,16 @@ import React from "react";
 import volunteersBanner from "@/public/images/volunteers-banner.webp";
 import Article from "@/components/article/Article";
 import RedLine from "@/components/red-line/RedLine";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Volunteers | Join Our Cause",
+  description: "Discover how you can make a difference by volunteering with us. Learn about our dedicated volunteers and the impact they make in the fight against domestic abuse.",
+  alternates: {
+    canonical: "volunteers",
+  },
+};
+
 
 const Volunteers = () => {
   return (

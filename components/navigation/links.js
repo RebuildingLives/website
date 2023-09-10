@@ -15,7 +15,7 @@ export const navLinks = [
     id: 3,
     name: "Survivor stories",
     hasDropDown: false,
-    path: "/survivor-stories",
+    path: "/survivors-stories",
   },
   {
     id: 4,

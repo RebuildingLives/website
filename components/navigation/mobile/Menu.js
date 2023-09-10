@@ -21,7 +21,7 @@ const menuItems = [
   {
     id: 3,
     heading: "Survivor stories",
-    links: [{ id: 1, name: "individual story here", path: "/survivor-stories" }],
+    links: [{ id: 1, name: "individual story here", path: "/survivors-stories" }],
   },
   {
     id: 4,

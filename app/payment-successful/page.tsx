@@ -4,6 +4,16 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { thankYouMsgIcon } from "@/public/icons/iconsList";
 import Image from "next/image";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Payment Successful | Thank You for Your Support",
+  description:
+    "Your payment has been successfully processed. Thank you for your generous contribution in our mission to end domestic abuse.",
+  alternates: {
+    canonical: "payment-successful",
+  },
+};
 
 const SuccessPayment = () => {
   const router = useRouter();

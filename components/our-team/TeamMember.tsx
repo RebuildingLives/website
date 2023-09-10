@@ -39,7 +39,7 @@ export const PersonCard = ({ teamMember }: TeamMemberProps) => {
           {teamMember.description?.content[0].content[0].value}
         </p>
         <br />
-        <Link className="underline font-medium" href={`/${teamMember?.slug}`}>
+        <Link className="underline font-medium" href={`/trustees/${teamMember?.slug}`}>
           Read more
         </Link>
       </div>
