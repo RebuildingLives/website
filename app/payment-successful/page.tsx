@@ -6,7 +6,7 @@ import { thankYouMsgIcon } from "@/public/icons/iconsList";
 import Image from "next/image";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: "Payment Successful | Thank You for Your Support",
   description:
     "Your payment has been successfully processed. Thank you for your generous contribution in our mission to end domestic abuse.",
